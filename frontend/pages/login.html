@@ -1,0 +1,172 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - HR Interview Portal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* Page navigation buttons */
+        .page-navigation {
+            width: 100%;
+            max-width: 446px;
+            margin: 0 auto 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .page-navigation a,
+        .page-navigation button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 16px;
+            border: 1px solid #d7e1f0;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #174366;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .page-navigation a:hover,
+        .page-navigation button:hover {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .login-card {
+            position: relative;
+        }
+
+        @media (max-width: 480px) {
+            .page-navigation {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-box">HR</span>
+            <span>Interview Portal</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html">Home</a>
+
+            <a href="login.html" class="active">Login</a>
+
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+
+        <!-- BACK AND HOME BUTTONS -->
+        <div class="page-navigation">
+
+            <button
+                type="button"
+                onclick="if (history.length > 1) { history.back(); } else { window.location.href='../index.html'; }">
+                &#8592; Back
+            </button>
+
+            <a href="../index.html">
+                &#8962; Home
+            </a>
+
+        </div>
+
+        <div class="login-card">
+
+            <div class="login-header">
+
+                <div class="login-icon">
+                    HR
+                </div>
+
+                <h1>Welcome Back</h1>
+
+                <p>
+                    Login to your HR Interview Portal account
+                </p>
+
+            </div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="register-text">
+                Don't have an account?
+                <a href="register.html">Register</a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- EXISTING JAVASCRIPT PRESERVED -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
+```

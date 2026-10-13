@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HR Interview Portal | Smart Hiring</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* HOME PAGE ENHANCEMENTS */
+        .hero {
+            min-height: 480px;
+            padding: 65px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 650px;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.2;
+            color: #172554;
+            margin: 18px 0;
+        }
+
+        .hero-content h1 span {
+            color: #2563eb;
+        }
+
+        .hero-description {
+            color: #64748b;
+            font-size: 17px;
+            line-height: 1.8;
+            max-width: 560px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            width: 430px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .primary-btn,
+        .secondary-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 22px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .primary-btn {
+            background: #2563eb;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .secondary-btn {
+            color: #1e40af;
+            border: 1px solid #bfdbfe;
+            background: white;
+        }
+
+        .secondary-btn:hover {
+            background: #eff6ff;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 35px;
+            padding: 0 16px;
+        }
+
+        .section-heading > p {
+            color: #2563eb;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+        }
+
+        .section-heading h2 {
+            color: #172554;
+            font-size: clamp(25px, 3vw, 34px);
+            margin-top: 10px;
+        }
+
+        .features,
+        .companies-section,
+        .roles-section {
+            padding: 65px 7%;
+        }
+
+        .feature-container,
+        .company-grid,
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .feature-card,
+        .company-card,
+        .role-card {
+            background: white;
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(15, 23, 42, 0.045);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover,
+        .company-card:hover,
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.09);
+        }
+
+        .feature-icon {
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3,
+        .company-card h3,
+        .role-card h3 {
+            color: #172554;
+            margin: 8px 0 12px;
+        }
+
+        .feature-card p,
+        .company-card p,
+        .role-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .companies-section {
+            background: #f8fafc;
+        }
+
+        .company-card {
+            border-top: 4px solid #2563eb;
+        }
+
+        .company-tag {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .company-card .skills {
+            margin-top: 12px;
+            color: #334155;
+            font-size: 13px;
+        }
+
+        .role-card {
+            padding: 22px;
+        }
+
+        .role-card .role-icon {
+            font-size: 27px;
+        }
+
+        .cta-section {
+            margin: 10px 7% 65px;
+            padding: 45px 25px;
+            text-align: center;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            border-radius: 20px;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(25px, 3vw, 34px);
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            color: #dbeafe;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .cta-section .primary-btn {
+            background: white;
+            color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #0f172a;
+            color: white;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            margin: 9px 0;
+        }
+
+        footer .copyright {
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 1000px) {
+            .feature-container,
+            .company-grid,
+            .role-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 42px 20px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image img {
+                max-width: 290px;
+            }
+
+            .feature-container,
+            .company-grid,
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features,
+            .companies-section,
+            .roles-section {
+                padding: 45px 20px;
+            }
+
+            .cta-section {
+                margin: 0 20px 45px;
+                padding: 35px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-box">HR</span>
+            <span>Interview Portal</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/login.html">Login</a>
+            <a href="pages/register.html" class="register-btn">Register</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="small-title">SMART INTERVIEW MANAGEMENT</p>
+
+            <h1>
+                Find the Right Talent.
+                <br>
+                <span>Build Better Teams.</span>
+            </h1>
+
+            <p class="hero-description">
+                A simple and powerful platform for managing jobs,
+                candidates, resumes, interviews and interview results
+                in one place.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="pages/register.html" class="primary-btn">
+                    Get Started <span>→</span>
+                </a>
+
+                <a href="pages/login.html" class="secondary-btn">
+                    Login
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/hr-man.png" alt="HR Professional">
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="section-heading">
+            <p>OUR FEATURES</p>
+            <h2>Everything you need to manage interviews</h2>
+        </div>
+
+        <div class="feature-container">
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Job Management</h3>
+                <p>Create, edit and manage job openings and requirements.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Candidate Management</h3>
+                <p>Review candidate information, applications and resumes.</p>
+            </div>
+
+            <div

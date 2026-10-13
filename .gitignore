@@ -1,0 +1,17 @@
+# Java / Spring Boot
+target/
+*.class
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+application-local.properties
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/

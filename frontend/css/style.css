@@ -1,0 +1,1954 @@
+/* ==========================================
+   HR INTERVIEW PORTAL
+   COMPLETE STYLE SHEET
+========================================== */
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #172b4d;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #e8eef7;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 23px;
+    font-weight: 700;
+    color: #172b4d;
+}
+
+.logo-box {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #172b4d;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.nav-links .active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 8px;
+}
+
+.register-btn {
+    background: #2563eb;
+    color: white !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+.register-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 7%;
+
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ffffff
+    );
+
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 48%;
+    z-index: 2;
+}
+
+.small-title {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.12;
+    color: #172b4d;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero-description {
+    max-width: 550px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 32px;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.primary-btn span {
+    font-size: 20px;
+}
+
+.secondary-btn {
+    text-decoration: none;
+    color: #2563eb;
+    background: white;
+    border: 1.5px solid #2563eb;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    background: #eff6ff;
+}
+
+
+/* ==========================================
+   HR IMAGE
+========================================== */
+
+.hero-image {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features {
+    padding: 75px 7%;
+    background: white;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading p {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #172b4d;
+}
+
+
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    padding: 28px 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    transition: 0.25s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(37, 99, 235, 0.10);
+}
+
+.feature-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.job-icon {
+    background: #dbeafe;
+}
+
+.candidate-icon {
+    background: #dcfce7;
+}
+
+.interview-icon {
+    background: #f3e8ff;
+}
+
+.result-icon {
+    background: #ffedd5;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: #172b4d;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #64748b;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    text-align: center;
+    background: #172b4d;
+    color: white;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+footer .copyright {
+    margin-top: 22px;
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
+.login-section {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #ffffff
+    );
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: #ffffff;
+
+    padding: 42px 40px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 15px 40px
+        rgba(23, 43, 77, 0.10);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.login-header h1 {
+    font-size: 30px;
+    color: #172b4d;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   FORMS
+========================================== */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #172b4d;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    color: #172b4d;
+
+    background: white;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.10);
+}
+
+.form-group input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+
+.login-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   REGISTER TEXT
+========================================== */
+
+.register-text {
+    text-align: center;
+
+    margin-top: 24px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.register-text a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard {
+    min-height: calc(100vh - 72px);
+
+    padding: 55px 7%;
+
+    background: #f8fafc;
+}
+
+.dashboard-header {
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 38px;
+    color: #172b4d;
+    margin-bottom: 10px;
+}
+
+.dashboard-header h1 span {
+    color: #2563eb;
+}
+
+.dashboard-header p:last-child {
+    color: #64748b;
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   DASHBOARD GRID
+========================================== */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.dashboard-card {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    padding: 26px;
+
+    transition: 0.25s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(23, 43, 77, 0.08);
+}
+
+.dashboard-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eff6ff;
+
+    border-radius: 10px;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+.dashboard-card h3 {
+    color: #172b4d;
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    min-height: 65px;
+}
+
+
+/* ==========================================
+   DASHBOARD BUTTON
+========================================== */
+
+.dashboard-btn {
+    margin-top: 15px;
+
+    padding: 10px 17px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.dashboard-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-section {
+    margin-top: 45px;
+}
+
+.profile-section h2 {
+    color: #172b4d;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+.profile-card {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    padding: 25px;
+}
+
+.profile-card strong {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.profile-card p {
+    color: #172b4d;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   JOBS PAGE
+========================================== */
+
+.jobs-section {
+    min-height: calc(100vh - 72px);
+
+    padding: 70px 6%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f5f8fc,
+            #eef4ff
+        );
+}
+
+.jobs-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   JOBS HEADER
+========================================== */
+
+.jobs-header {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.jobs-header h1 {
+    font-size: 42px;
+
+    font-weight: 700;
+
+    color: #172b4d;
+
+    margin-bottom: 12px;
+}
+
+.jobs-header p {
+    font-size: 17px;
+
+    color: #64748b;
+}
+
+
+/* ==========================================
+   JOB CARD
+========================================== */
+
+.job-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 32px;
+
+    margin-bottom: 24px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(23, 43, 77, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(23, 43, 77, 0.12);
+}
+
+
+/* ==========================================
+   JOB LABEL
+========================================== */
+
+.job-card::before {
+    content: "JOB OPENING";
+
+    display: inline-block;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ==========================================
+   JOB TITLE
+========================================== */
+
+.job-card h2 {
+    color: #172b4d;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    margin-bottom: 13px;
+}
+
+
+/* ==========================================
+   JOB DESCRIPTION
+========================================== */
+
+.job-description {
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+
+/* ==========================================
+   JOB REQUIREMENTS
+========================================== */
+
+.job-requirements {
+    background: #f8fafc;
+
+    border-left: 4px solid #2563eb;
+
+    padding: 15px 17px;
+
+    border-radius: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.job-requirements strong {
+    color: #172b4d;
+}
+
+
+/* ==========================================
+   APPLY BUTTON
+========================================== */
+
+.job-btn {
+    border: none;
+
+    border-radius: 9px;
+
+    padding: 12px 25px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.job-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   NO JOBS
+========================================== */
+
+.no-jobs {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    box-shadow:
+        0 10px 30px
+        rgba(23, 43, 77, 0.06);
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 5%;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        max-width: 700px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+
+        margin-top: 30px;
+    }
+
+    .feature-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .logo-box {
+        width: 35px;
+        height: 35px;
+
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .register-btn {
+        padding: 9px 12px;
+    }
+
+
+    /* HERO */
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 180px;
+
+        justify-content: center;
+    }
+
+
+    /* FEATURES */
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+
+    /* LOGIN */
+
+    .login-section {
+        padding: 30px 18px;
+    }
+
+    .login-card {
+        padding: 32px 24px;
+    }
+
+    .login-header h1 {
+        font-size: 26px;
+    }
+
+
+    /* DASHBOARD */
+
+    .dashboard {
+        padding: 35px 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* JOBS */
+
+    .jobs-section {
+        padding: 45px 20px;
+    }
+
+    .jobs-header {
+        margin-bottom: 32px;
+    }
+
+    .jobs-header h1 {
+        font-size: 32px;
+    }
+
+    .jobs-header p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .job-card {
+        padding: 24px 20px;
+    }
+
+    .job-card h2 {
+        font-size: 23px;
+    }
+
+    .job-description {
+        font-size: 15px;
+    }
+
+    .job-btn {
+        width: 100%;
+    }
+}
+/* ==========================================
+   APPLICATION PAGE
+========================================== */
+
+.application-section {
+    min-height: calc(100vh - 72px);
+
+    padding: 65px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #ffffff
+        );
+}
+
+.application-container {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   APPLICATION HEADER
+========================================== */
+
+.application-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.application-label {
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.application-header h1 {
+    font-size: 40px;
+
+    color: #172b4d;
+
+    margin-bottom: 12px;
+}
+
+.application-header > p:last-child {
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   APPLICATION CARD
+========================================== */
+
+.application-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(23, 43, 77, 0.08);
+}
+
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    color: #172b4d;
+
+    resize: vertical;
+
+    transition: 0.2s;
+}
+
+.form-group textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.10);
+}
+
+
+/* ==========================================
+   FILE INPUT
+========================================== */
+
+.form-group input[type="file"] {
+    padding: 11px;
+
+    background: #f8fafc;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   SMALL HELP TEXT
+========================================== */
+
+.form-group small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   APPLICATION BUTTON
+========================================== */
+
+.application-btn {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    margin-top: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.application-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .application-section {
+        padding: 40px 18px;
+    }
+
+    .application-header h1 {
+        font-size: 32px;
+    }
+
+    .application-header > p:last-child {
+        font-size: 14px;
+    }
+
+    .application-card {
+        padding: 25px 20px;
+    }
+
+}
+/* =========================================================
+   PROFESSIONAL DASHBOARD DESIGN
+========================================================= */
+
+.dashboard-section {
+    min-height: calc(100vh - 72px);
+    padding: 55px 35px 70px;
+    background: linear-gradient(
+        135deg,
+        #f5f8ff 0%,
+        #ffffff 55%,
+        #f8fbff 100%
+    );
+}
+
+.dashboard-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+    margin-bottom: 40px;
+}
+
+.dashboard-label {
+    margin: 0 0 10px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    color: #172b4d;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.dashboard-header h1 span {
+    color: #2563eb;
+}
+
+.dashboard-header > p:last-child {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+/* =========================================================
+   DASHBOARD CARDS
+========================================================= */
+
+.dashboard-card {
+    min-height: 270px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 8px 25px rgba(23, 43, 77, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 18px 40px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.dashboard-card-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background: #eff6ff;
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.dashboard-card h3 {
+    margin: 0 0 10px;
+
+    color: #172b4d;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.dashboard-card p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.dashboard-card p span {
+    color: #2563eb;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   DASHBOARD BUTTON
+========================================================= */
+
+.dashboard-btn {
+    width: fit-content;
+
+    margin-top: auto;
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.dashboard-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.25);
+}
+
+.dashboard-btn:active {
+    transform: translateY(0);
+}
+
+/* =========================================================
+   ACCOUNT INFORMATION
+========================================================= */
+
+.profile-section {
+    margin-top: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    padding: 30px 34px;
+
+    box-shadow:
+        0 8px 25px rgba(23, 43, 77, 0.05);
+}
+
+.profile-header {
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.profile-header h2 {
+    margin: 0 0 7px;
+
+    color: #172b4d;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.profile-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+/* =========================================================
+   PROFILE DETAILS
+========================================================= */
+
+.profile-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.profile-item {
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+}
+
+.profile-item span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.profile-item strong {
+    display: block;
+
+    color: #172b4d;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+/* =========================================================
+   NAVBAR IMPROVEMENT
+========================================================= */
+
+.navbar {
+    min-height: 72px;
+
+    padding: 0 7%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 2px 12px rgba(23, 43, 77, 0.04);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #172b4d;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #334155;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2563eb;
+
+    transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .profile-details {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard-section {
+        padding: 40px 18px 55px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 32px;
+    }
+
+    .dashboard-header > p:last-child {
+        font-size: 14px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        min-height: 240px;
+    }
+
+    .profile-section {
+        padding: 24px 20px;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .dashboard-card {
+        padding: 23px;
+    }
+}
+
+/* ===== Available Jobs Page ===== */
+
+.jobs-page {
+    min-height: 100vh;
+    padding: 65px 6%;
+    background: linear-gradient(135deg, #f5f8ff, #eaf1ff);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #192f55;
+}
+
+.jobs-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.jobs-header h1 {
+    font-size: 44px;
+    font-weight: 800;
+    color: #192f55;
+    margin-bottom: 14px;
+}
+
+.jobs-header p {
+    color: #647895;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Jobs list */
+
+.jobs-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+}
+
+/* Individual job card */
+
+.job-card {
+    background: #ffffff;
+    padding: 34px;
+    border-radius: 20px;
+    border: 1px solid #e3eaf5;
+    box-shadow: 0 12px 35px rgba(30, 58, 100, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 42px rgba(30, 58, 100, 0.14);
+}
+
+.job-badge {
+    display: inline-block;
+    background: #edf4ff;
+    color: #2563eb;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.job-card h2,
+.job-card h3 {
+    color: #192f55;
+    font-size: 27px;
+    margin-bottom: 15px;
+    font-weight: 750;
+}
+
+.job-description {
+    color: #647895;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.job-requirements {
+    color: #253b5c;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.job-requirements strong {
+    color: #192f55;
+}
+
+.job-id {
+    color: #647895;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+/* Apply button */
+
+.apply-btn {
+    display: inline-block;
+    background: #2864ed;
+    color: #ffffff;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.apply-btn:hover {
+    background: #1749c7;
+    transform: translateY(-2px);
+}
+
+.apply-btn:focus-visible {
+    outline: 3px solid #93b4ff;
+    outline-offset: 3px;
+}
+
+/* Empty state */
+
+.no-jobs {
+    background: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 16px;
+    color: #647895;
+    box-shadow: 0 10px 30px rgba(30, 58, 100, 0.06);
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+    .jobs-page {
+        padding: 40px 5%;
+    }
+
+    .jobs-header h1 {
+        font-size: 34px;
+    }
+
+    .jobs-header p {
+        font-size: 15px;
+    }
+
+    .job-card {
+        padding: 25px 21px;
+        border-radius: 15px;
+    }
+
+    .job-card h2,
+    .job-card h3 {
+        font-size: 23px;
+    }
+
+    .job-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .jobs-header h1 {
+        font-size: 29px;
+    }
+
+    .job-card {
+        padding: 20px 16px;
+    }
+
+    .apply-btn {
+        width: 100%;
+    }
+}
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.page-navigation button,
+.page-navigation a {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.page-navigation button:hover,
+.page-navigation a:hover {
+    background: #174366;
+}
