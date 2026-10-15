@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply for Job - HR Interview Portal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+
+        .apply-section {
+            padding: 60px 20px;
+        }
+
+        .apply-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .apply-header {
+            margin-bottom: 30px;
+        }
+
+        .apply-header h1 {
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .apply-header p {
+            color: #64748b;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #172554;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .resume-box {
+            padding: 18px;
+            background: #f8fafc;
+            border: 1px dashed #94a3b8;
+            border-radius: 10px;
+        }
+
+        .resume-note {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 13px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .success-message {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 8px;
+            background: #dcfce7;
+            color: #166534;
+            display: none;
+            font-weight: 600;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .submit-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .job-info {
+            padding: 18px;
+            margin-bottom: 30px;
+            background: #eff6ff;
+            border-radius: 12px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .job-info p {
+            margin: 7px 0;
+        }
+
+        .selected-file {
+            margin-top: 12px;
+            padding: 10px 12px;
+            background: #eff6ff;
+            border-radius: 8px;
+            color: #1e40af;
+            font-size: 14px;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+
+            .apply-container {
+                padding: 22px;
+            }
+
+            .apply-section {
+                padding: 30px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            HR Interview Portal
+        </div>
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="jobs.html">
+                Jobs
+            </a>
+
+            <a href="#" id="logoutBtn">
+                Logout
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- APPLY SECTION -->
+
+    <section class="apply-section">
+
+        <div class="apply-container">
+
+            <div class="apply-header">
+
+                <h1>
+                    Apply for Job
+                </h1>
+
+                <p>
+                    Submit your details and resume for this job.
+                </p>
+
+            </div>
+
+
+            <!-- JOB INFORMATION -->
+
+            <div class="job-info">
+
+                <p>
+                    <strong>Job ID:</strong>
+
+                    <span id="jobIdDisplay">
+                        Loading...
+                    </span>
+                </p>
+
+                <p>
+                    <strong>Job Title:</strong>
+
+                    <span id="jobTitleDisplay">
+                        Loading...
+                    </span>
+                </p>
+
+            </div>
+
+
+            <!-- APPLICATION FORM -->
+
+            <form id="applicationForm">
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter 10-digit phone number"
+                        maxlength="10"
+                        inputmode="numeric"
+                        required>
+
+                    <div
+                        id="phoneError"
+                        class="error-message">
+
+                        Phone number must contain exactly 10 digits.
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXPERIENCE -->
+
+                <div class="form-group">
+
+                    <label for="experience">
+                        Experience
+                    </label>
+
+                    <input
+                        type="text"
+                        id="experience"
+                        placeholder="Example: Fresher or 1 year"
+                        required>
+
+                </div>
+
+
+                <!-- RESUME -->
+
+                <div class="form-group">
+
+                    <label for="resume">
+                        Resume
+                    </label>
+
+                    <div class="resume-box">
+
+                        <input
+                            type="file"
+                            id="resume"
+                            name="resume"
+                            accept=".pdf,.doc,.docx"
+                            required>
+
+                        <div
+                            id="selectedFile"
+                            class="selected-file">
+                        </div>
+
+                        <div class="resume-note">
+
+                            Accepted formats:
+                            PDF, DOC, DOCX
+
+                            <br>
+
+                            Maximum size:
+                            5 MB
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="resumeError"
+                        class="error-message">
+                    </div>
+
+                </div>
+
+
+                <!-- COVER LETTER -->
+
+                <div class="form-group">
+
+                    <label for="coverLetter">
+                        Cover Letter
+                    </label>
+
+                    <textarea
+                        id="coverLetter"
+                        rows="6"
+                        placeholder="Write your cover letter"></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    id="submitBtn"
+                    class="submit-btn">
+
+                    Submit Application
+
+                </button>
+
+
+                <!-- SUCCESS -->
+
+                <div
+                    id="successMessage"
+                    class="success-message">
+
+                    Application submitted successfully!
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        const API_BASE_URL = "http://localhost:8080";
+
+
+        // =========================================
+        // GET LOGGED IN USER
+        // =========================================
+
+        const storedUser =
+            localStorage.getItem("loggedInUser");
+
+        let loggedInUser = null;
+
+        if (storedUser) {
+
+            try {
+
+                loggedInUser =
+                    JSON.parse(storedUser);
+
+            } catch (error) {
+
+                console.error(
+                    "Invalid user information",
+                    error
+                );
+
+            }
+
+        }
+
+
+        // =========================================
+        // CHECK LOGIN
+        // =========================================
+
+        if (!loggedInUser) {
+
+            alert("Please login before applying.");
+
+            window.location.href = "login.html";
+
+        }
+
+
+        // =========================================
+        // GET JOB ID
+        // =========================================
+
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const jobId =
+            urlParams.get("jobId");
+
+
+        document.getElementById(
+            "jobIdDisplay"
+        ).textContent =
+            jobId || "Not provided";
+
+
+        // =========================================
+        // LOAD JOB DETAILS
+        // =========================================
+
+        async function loadJobDetails() {
+
+            if (!jobId) {
+
+                document.getElementById(
+                    "jobTitleDisplay"
+                ).textContent =
+                    "Job not selected";
+
+                return;
+
+            }
+
+            try {
+
+                const response =
+                    await fetch(
+                        API_BASE_URL +
+                        "/api/jobs/" +
+                        jobId
+                    );
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Unable to load job"
+                    );
+
+                }
+
+                const job =
+                    await response.json();
+
+                document.getElementById(
+                    "jobTitleDisplay"
+                ).textContent =
+                    job.title || "Job";
+
+            } catch (error) {
+
+                console.error(error);
+
+                document.getElementById(
+                    "jobTitleDisplay"
+                ).textContent =
+                    "Job details unavailable";
+
+            }
+
+        }
+
+        loadJobDetails();
+
+
+        // =========================================
+        // AUTO FILL USER DETAILS
+        // =========================================
+
+        if (loggedInUser) {
+
+            document.getElementById(
+                "fullName"
+            ).value =
+                loggedInUser.name || "";
+
+            document.getElementById(
+                "email"
+            ).value =
+                loggedInUser.email || "";
+
+        }
+
+
+        // =========================================
+        // PHONE VALIDATION
+        // =========================================
+
+        const phoneInput =
+            document.getElementById("phone");
+
+        const phoneError =
+            document.getElementById("phoneError");
+
+        phoneInput.addEventListener(
+            "input",
+            function () {
+
+                this.value =
+                    this.value.replace(/\D/g, "");
+
+                this.value =
+                    this.value.substring(0, 10);
+
+                if (this.value.length === 10) {
+
+                    phoneError.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        // =========================================
+        // SHOW SELECTED FILE
+        // =========================================
+
+        const resumeInput =
+            document.getElementById("resume");
+
+        const selectedFile =
+            document.getElementById("selectedFile");
+
+        resumeInput.addEventListener(
+            "change",
+            function () {
+
+                if (this.files.length > 0) {
+
+                    selectedFile.textContent =
+                        "Selected resume: " +
+                        this.files[0].name;
+
+                    selectedFile.style.display =
+                        "block";
+
+                } else {
+
+                    selectedFile.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        // =========================================
+        // FORM SUBMIT
+        // =========================================
+
+        document.getElementById(
+            "applicationForm"
+        ).addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+
+                if (!loggedInUser) {
+
+                    alert("Please login first.");
+
+                    return;
+
+                }
+
+
+                if (!jobId) {
+
+                    alert("Job ID is missing.");
+
+                    return;
+
+                }
+
+
+                const fullName =
+                    document.getElementById(
+                        "fullName"
+                    ).value.trim();
+
+                const email =
+                    document.getElementById(
+                        "email"
+                    ).value.trim();
+
+                const phone =
+                    document.getElementById(
+                        "phone"
+                    ).value.trim();
+
+                const experience =
+                    document.getElementById(
+                        "experience"
+                    ).value.trim();
+
+                const coverLetter =
+                    document.getElementById(
+                        "coverLetter"
+                    ).value.trim();
+
+                const resume =
+                    document.getElementById(
+                        "resume"
+                    ).files[0];
+
+
+                // =================================
+                // PHONE VALIDATION
+                // =================================
+
+                if (!/^[0-9]{10}$/.test(phone)) {
+
+                    phoneError.style.display =
+                        "block";
+
+                    phoneInput.focus();
+
+                    return;
+
+                }
+
+                phoneError.style.display =
+                    "none";
+
+
+                // =================================
+                // RESUME VALIDATION
+                // =================================
+
+                const resumeError =
+                    document.getElementById(
+                        "resumeError"
+                    );
+
+                if (!resume) {
+
+                    resumeError.textContent =
+                        "Please select your resume.";
+
+                    resumeError.style.display =
+                        "block";
+
+                    return;
+
+                }
+
+
+                const allowedExtensions = [
+                    "pdf",
+                    "doc",
+                    "docx"
+                ];
+
+                const fileName =
+                    resume.name.toLowerCase();
+
+                const extension =
+                    fileName
+                        .split(".")
+                        .pop();
+
+
+                if (
+                    !allowedExtensions.includes(
+                        extension
+                    )
+                ) {
+
+                    resumeError.textContent =
+                        "Please upload PDF, DOC or DOCX file.";
+
+                    resumeError.style.display =
+                        "block";
+
+                    return;
+
+                }
+
+
+                // =================================
+                // FILE SIZE
+                // =================================
+
+                const maxSize =
+                    5 * 1024 * 1024;
+
+                if (resume.size > maxSize) {
+
+                    resumeError.textContent =
+                        "Resume size must be less than 5 MB.";
+
+                    resumeError.style.display =
+                        "block";
+
+                    return;
+
+                }
+
+                resumeError.style.display =
+                    "none";
+
+
+                // =================================
+                // CREATE FORMDATA
+                // =================================
+
+                const formData =
+                    new FormData();
+
+                formData.append(
+                    "jobId",
+                    jobId
+                );
+
+                formData.append(
+                    "userId",
+                    String(loggedInUser.id)
+                );
+
+                formData.append(
+                    "fullName",
+                    fullName
+                );
+
+                formData.append(
+                    "email",
+                    email
+                );
+
+                formData.append(
+                    "phone",
+                    phone
+                );
+
+                formData.append(
+                    "experience",
+                    experience
+                );
+
+                formData.append(
+                    "coverLetter",
+                    coverLetter
+                );
+
+                formData.append(
+                    "resume",
+                    resume,
+                    resume.name
+                );
+
+
+                // =================================
+                // SUBMIT BUTTON
+                // =================================
+
+                const submitBtn =
+                    document.getElementById(
+                        "submitBtn"
+                    );
+
+                submitBtn.disabled =
+                    true;
+
+                submitBtn.textContent =
+                    "Uploading Resume...";
+
+
+                // =================================
+                // SEND TO SPRING BOOT
+                // =================================
+
+                try {
+
+                    const response =
+                        await fetch(
+                            API_BASE_URL +
+                            "/api/applications/with-resume",
+                            {
+                                method: "POST",
+                                body: formData
+                            }
+                        );
+
+
+                    const responseText =
+                        await response.text();
+
+
+                    console.log(
+                        "Server response:",
+                        responseText
+                    );
+
+
+                    if (!response.ok) {
+
+                        throw new Error(
+                            responseText ||
+                            "Application submission failed"
+                        );
+
+                    }
+
+
+                    // =================================
+                    // SUCCESS
+                    // =================================
+
+                    document.getElementById(
+                        "successMessage"
+                    ).textContent =
+                        "Application submitted successfully! Resume uploaded.";
+
+                    document.getElementById(
+                        "successMessage"
+                    ).style.display =
+                        "block";
+
+
+                    submitBtn.textContent =
+                        "Application Submitted";
+
+
+                    // Don't allow duplicate submission
+
+                    submitBtn.disabled =
+                        true;
+
+
+                    console.log(
+                        "Application submitted with resume:",
+                        responseText
+                    );
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Application error:",
+                        error
+                    );
+
+
+                    alert(
+                        "Unable to submit application.\n\n" +
+                        error.message
+                    );
+
+
+                    submitBtn.disabled =
+                        false;
+
+                    submitBtn.textContent =
+                        "Submit Application";
+
+                }
+
+            }
+        );
+
+
+        // =========================================
+        // LOGOUT
+        // =========================================
+
+        document.getElementById(
+            "logoutBtn"
+        ).addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+                localStorage.removeItem(
+                    "loggedInUser"
+                );
+
+                window.location.href =
+                    "login.html";
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

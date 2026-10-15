@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Jobs - HR Interview Portal</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo">HR Interview Portal</a>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="jobs.html" class="active">Jobs</a>
+            <a href="#" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <!-- AVAILABLE JOBS -->
+    <main class="jobs-page">
+
+        <header class="jobs-header">
+            <h1>Available Jobs</h1>
+            <p>Explore current job openings and find your next career opportunity.</p>
+        </header>
+
+        <!-- Jobs are loaded dynamically by main.js -->
+        <section class="jobs-container" id="jobsContainer" aria-live="polite">
+            <div class="no-jobs">Loading available jobs...</div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 HR Interview Portal. All rights reserved.
+    </footer>
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
